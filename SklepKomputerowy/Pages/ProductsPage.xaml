@@ -27,7 +27,7 @@
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Nazwa Produktu: " Foreground="White" Width="150" />
-                <TextBox Foreground="White" Background="MidnightBlue" Width="150" />
+                <TextBox Name="NameTextBox"  Foreground="White" Background="MidnightBlue" Width="150" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Kod Produktu: " Foreground="White" Width="150" />
@@ -42,7 +42,7 @@
                 <TextBox Foreground="White" Background="MidnightBlue" Width="150" />
             </StackPanel>
 
-            <Button Background="DeepSkyBlue" Content="Szukaj" Foreground="MediumBlue" Width="100" />
+            <Button Background="DeepSkyBlue" Content="Szukaj" Foreground="MediumBlue" Width="100" Click="SearchButton_OnClick" />
         </WrapPanel>
 
         <ScrollViewer Grid.Column="0" Grid.Row="1">

@@ -47,8 +47,9 @@ namespace SklepKomputerowy.Pages
             ListViewProducts.ItemsSource = Products;
         }
 
-
-
-
+        private void SearchButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            ListViewProducts.ItemsSource = Products.Where(x => x.Name.Contains(NameTextBox.Text));
+        }
     }
 }
