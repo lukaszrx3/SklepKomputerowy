@@ -1,0 +1,39 @@
+﻿<Window x:Class="SklepKomputerowy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SklepKomputerowy"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" MinWidth="200" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#FF110B1F">
+            <StackPanel >
+                <Button x:Name="HomeListButton" VerticalAlignment="Top" Background="Transparent">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Home" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="ProductsButton" VerticalAlignment="Top" Background="Transparent" Click="ProductsButton_OnClick">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Sprzet komputerowy" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Top" Background="Transparent">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Sprzet AGD" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Grid>
+        <Frame x:Name="MainContentFrame" Grid.Column="1" Background="#FF04043E" NavigationUIVisibility="Hidden">
+
+        </Frame>
+    </Grid>
+</Window>
