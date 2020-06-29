@@ -28,13 +28,14 @@ namespace SklepKomputerowy.Pages
         {
             InitializeComponent();
             db = new SklepKomputerowyDbEntities();
+            Products = new List<Product>();
 
             foreach (var product in db.Produkty)
             {
                 Product p = new Product
                 {
                     Code = product.Kod,
-                    Description = "",
+                    Description = product.Opis,
                     Name = product.Nazwa,
                     ImgUrl = product.AdresObrazka,
                     Price = product.Cena,

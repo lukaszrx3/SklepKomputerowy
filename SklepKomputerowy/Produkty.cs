@@ -27,6 +27,7 @@ namespace SklepKomputerowy
         public decimal Cena { get; set; }
         public string AdresObrazka { get; set; }
         public Nullable<int> IdKategorii { get; set; }
+        public string Opis { get; set; }
     
         public virtual Kategorie Kategorie { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

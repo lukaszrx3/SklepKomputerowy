@@ -24,9 +24,9 @@
                         <TextBlock Text="Sprzet komputerowy" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
                     </StackPanel>
                 </Button>
-                <Button VerticalAlignment="Top" Background="Transparent">
+                <Button VerticalAlignment="Top" Background="Transparent" Click="ButtonBase_OnClick">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Sprzet AGD" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
+                        <TextBlock Text="Dodawanie produktow" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
                     </StackPanel>
                 </Button>
 

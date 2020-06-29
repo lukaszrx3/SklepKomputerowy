@@ -32,6 +32,7 @@
           <Property Name="Cena" Type="money" Nullable="false" />
           <Property Name="AdresObrazka" Type="nvarchar" MaxLength="250" />
           <Property Name="IdKategorii" Type="int" />
+          <Property Name="Opis" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <Association Name="FK_ParametryDict_Produkty">
           <End Role="Produkty" Type="Self.Produkty" Multiplicity="1" />
@@ -105,6 +106,7 @@
           <Property Name="IdKategorii" Type="Int32" />
           <NavigationProperty Name="Kategorie" Relationship="Self.FK_Produkty_Kategorie" FromRole="Produkty" ToRole="Kategorie" />
           <NavigationProperty Name="ParametryDict" Relationship="SklepKomputerowyDbModel.FK_ParametryDict_Produkty" FromRole="Produkty" ToRole="ParametryDict" />
+          <Property Name="Opis" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Produkty_Kategorie">
           <End Role="Kategorie" Type="Self.Kategorie" Multiplicity="0..1" />
@@ -170,6 +172,7 @@
           <EntitySetMapping Name="Produkty">
             <EntityTypeMapping TypeName="SklepKomputerowyDbModel.Produkty">
               <MappingFragment StoreEntitySet="Produkty">
+                <ScalarProperty Name="Opis" ColumnName="Opis" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
                 <ScalarProperty Name="Kategoria" ColumnName="Kategoria" />
