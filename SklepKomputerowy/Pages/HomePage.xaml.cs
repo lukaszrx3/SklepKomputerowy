@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace SklepKomputerowy.Pages
 {
     /// <summary>
-    /// Interaction logic for ProductsPage.xaml
+    /// Interaction logic for HomePage.xaml
     /// </summary>
-    public partial class ProductsPage : Page
+    public partial class HomePage : Page
     {
-        private SklepKomputerowyDbEntities db;
-
-        public ProductsPage()
+        public HomePage()
         {
             InitializeComponent();
-            db = new SklepKomputerowyDbEntities();
         }
-
-
-
-
     }
 }

@@ -67,6 +67,9 @@
     <Compile Include="Kategorie.cs">
       <DependentUpon>SklepKomputerowyModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ParametryDict.cs">
       <DependentUpon>SklepKomputerowyModel.tt</DependentUpon>
     </Compile>
@@ -101,6 +104,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ProductsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

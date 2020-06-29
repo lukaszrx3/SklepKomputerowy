@@ -14,7 +14,7 @@
 
         <Grid Grid.Column="0" Background="#FF110B1F">
             <StackPanel >
-                <Button x:Name="HomeListButton" VerticalAlignment="Top" Background="Transparent">
+                <Button x:Name="HomeListButton" VerticalAlignment="Top" Background="Transparent" Click="HomeListButton_OnClick">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Home" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFA6E3FF" />
                     </StackPanel>

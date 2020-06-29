@@ -30,5 +30,10 @@ namespace SklepKomputerowy
         {
             MainContentFrame.Navigate(new ProductsPage());
         }
+
+        private void HomeListButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            MainContentFrame.Navigate(new HomePage());
+        }
     }
 }
