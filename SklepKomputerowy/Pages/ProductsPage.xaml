@@ -92,7 +92,6 @@
                                     <TextBlock TextWrapping="Wrap" Text="{Binding WarrantyMonths}" Height="20" />
                                 </StackPanel>
                             </StackPanel>
-
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                     <ItemsControl.ItemsPanel>

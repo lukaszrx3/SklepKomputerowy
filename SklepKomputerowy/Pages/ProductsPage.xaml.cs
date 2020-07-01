@@ -51,5 +51,7 @@ namespace SklepKomputerowy.Pages
         {
             ListViewProducts.ItemsSource = Products.Where(x => x.Name.Contains(NameTextBox.Text));
         }
+
+
     }
 }

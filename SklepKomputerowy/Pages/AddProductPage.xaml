@@ -7,7 +7,7 @@
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AddProductPage"
-      Background="SteelBlue">
+      Background="#111D5E">
 
 
     <Grid>
@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock FontSize="30" Grid.Row="0" Text="Nowy produkt" HorizontalAlignment="Center"
-                   VerticalAlignment="Center" />
+                   VerticalAlignment="Center" Foreground="#ffbd69" />
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -28,37 +28,48 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" MaxWidth="200" />
+                <ColumnDefinition Width="2*" MaxWidth="300" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
             <!--Kategoria-->
-            <TextBlock Grid.Column="0" Grid.Row="0" Text="Kategoria" Foreground="White" HorizontalAlignment="Center"
-                       VerticalAlignment="Center" FontSize="20" />
-            <TextBox Name="CategoryTextBox" Background="Transparent" Grid.Column="1" Grid.Row="0" />
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Kategoria" Foreground="#ffbd69" HorizontalAlignment="Center"
+                       VerticalAlignment="Center" FontSize="20"/>
+            <TextBox Name="CategoryTextBox" Background="Transparent" Grid.Column="1" Grid.Row="0" Foreground="#ffbd69" MaxHeight="30"/>
 
             <!--Nazwa-->
-            <TextBlock Grid.Column="0" Grid.Row="1" Text="Nazwa" Foreground="White" HorizontalAlignment="Center"
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Nazwa" Foreground="#ffbd69" HorizontalAlignment="Center"
                        VerticalAlignment="Center" FontSize="20" />
-            <TextBox Name="NameTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="1" />
+            <TextBox Name="NameTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="1" Foreground="#ffbd69" MaxHeight="30" />
 
             <!--Cena-->
-            <TextBlock Grid.Column="0" Grid.Row="2" Text="Cena" Foreground="White" HorizontalAlignment="Center"
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Cena" Foreground="#ffbd69" HorizontalAlignment="Center"
                        VerticalAlignment="Center" FontSize="20" />
-            <TextBox Name="PriceTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="2" />
+            <TextBox Name="PriceTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="2" Foreground="#ffbd69" MaxHeight="30" />
 
             <!--URL obrazka-->
-            <TextBlock Grid.Column="0" Grid.Row="3" Text="Adres obrazka" Foreground="White" HorizontalAlignment="Center"
+            <TextBlock Grid.Column="0" Grid.Row="3" Text="Adres obrazka" Foreground="#ffbd69" HorizontalAlignment="Center"
                        VerticalAlignment="Center" FontSize="20" />
-            <TextBox Name="UrlTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="3" />
+            <TextBox Name="UrlTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="3" Foreground="#ffbd69" MaxHeight="30" />
 
             <!--Opis-->
-            <TextBlock Grid.Column="0" Grid.Row="4" Text="Opis" Foreground="White" HorizontalAlignment="Center"
+            <TextBlock Grid.Column="0" Grid.Row="4" Text="Opis" Foreground="#ffbd69" HorizontalAlignment="Center"
                        VerticalAlignment="Center" FontSize="20" />
-            <TextBox Name="DescTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="4" />
+            <TextBox Name="DescTextBox"  Background="Transparent" Grid.Column="1" Grid.Row="4" Foreground="#ffbd69" MaxHeight="30" />
         </Grid>
         <StackPanel Grid.Row="2">
-            <Button Name="AddProductButton" Click="AddProductButton_OnClick">Dodaj produkt</Button>
+            <Button Name="AddProductButton" Click="AddProductButton_OnClick" 
+                    Width="200" Height="50"
+                    Foreground="White" FontSize="20"
+                    HorizontalAlignment="Right" Margin="20" Background="#FFC70039">
+                Dodaj produkt
+            <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="15"></Setter>
+                    </Style>
+            </Button.Resources>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>
