@@ -23,12 +23,15 @@ namespace SklepKomputerowy.Pages
     {
         private SklepKomputerowyDbEntities db;
         public List<Product> Products;
+        private int priceMin;
+        private int priceMax;
 
         public ProductsPage()
         {
             InitializeComponent();
             db = new SklepKomputerowyDbEntities();
             Products = new List<Product>();
+            
 
             foreach (var product in db.Produkty)
             {
@@ -49,6 +52,8 @@ namespace SklepKomputerowy.Pages
 
         private void SearchButton_OnClick(object sender, RoutedEventArgs e)
         {
+
+
             ListViewProducts.ItemsSource = Products.Where(x => x.Name.Contains(NameTextBox.Text));
         }
 

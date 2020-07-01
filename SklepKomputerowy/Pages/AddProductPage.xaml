@@ -61,7 +61,7 @@
         <StackPanel Grid.Row="2">
             <Button Name="AddProductButton" Click="AddProductButton_OnClick" 
                     Width="200" Height="50"
-                    Foreground="White" FontSize="20"
+                    Foreground="#111d5e" FontSize="20" FontWeight="DemiBold"
                     HorizontalAlignment="Right" Margin="20" Background="#FFC70039">
                 Dodaj produkt
             <Button.Resources>

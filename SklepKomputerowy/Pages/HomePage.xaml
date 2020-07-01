@@ -13,5 +13,37 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <!-- Gorny rzad -->
+        <StackPanel Grid.Row="0" Background="SteelBlue">
+            <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold">
+                Lukasz Radzik -  Sklep Komputerowy
+            </TextBlock>
+        </StackPanel>
+
+        <!-- Dolny rzad -->
+        <Grid Grid.Row="1" Background="Brown">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!-- Lewy -->
+            <StackPanel Grid.Column="0" Background="#FF244664">
+                <TextBlock Foreground="AliceBlue">Kontakt</TextBlock>
+                <TextBlock Foreground="AliceBlue">Ul. Taka i taka</TextBlock>
+                <TextBlock Foreground="AliceBlue">Miasto: Rzeszow</TextBlock>
+                <TextBlock Foreground="AliceBlue">Podkarpacie</TextBlock>
+            </StackPanel>
+
+            <!-- Prawy -->
+            <StackPanel Grid.Column="1" Background="DarkOrange">
+                <TextBlock>Wykonal:</TextBlock>
+                <TextBlock>Lukasz Radzik</TextBlock>
+                <TextBlock>Semestr: 4</TextBlock>
+                <TextBlock>Kierunek: Informatyka</TextBlock>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Page>
