@@ -31,7 +31,6 @@ namespace SklepKomputerowy.Pages
 
         private void AddProductButton_OnClick(object sender, RoutedEventArgs e)
         {
-
             Produkty p = new Produkty
             {
                 Kod = "asd",

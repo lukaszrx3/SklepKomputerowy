@@ -31,15 +31,15 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Kod Produktu: " Foreground="White" Width="150" />
-                <TextBox Foreground="White" Background="MidnightBlue" Width="150" />
+                <TextBox Name="CodeTextBox" Foreground="White" Background="MidnightBlue" Width="150" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Cena od: " Foreground="White" Width="150" />
-                <TextBox Foreground="White" Background="MidnightBlue" Width="150" />
+                <TextBox Name="PriceFromTextBox" Foreground="White" Background="MidnightBlue" Width="150" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Cena do: " Foreground="White" Width="150" />
-                <TextBox Foreground="White" Background="MidnightBlue" Width="150" />
+                <TextBox Name="PriceToTextBox" Foreground="White" Background="MidnightBlue" Width="150" />
             </StackPanel>
 
             <Button Background="DeepSkyBlue" Content="Szukaj" Foreground="MediumBlue" Width="100" Click="SearchButton_OnClick" />

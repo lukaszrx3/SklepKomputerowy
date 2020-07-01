@@ -13,7 +13,6 @@ namespace SklepKomputerowy.ViewModels
         public string Description { get; set; }
         public int WarrantyMonths { get; set; }
         public decimal Price { get; set; }
-        public Dictionary<string, string> ExtraParametersDictionary { get; set; }
         public string ImgUrl { get; set; }
     }
 }

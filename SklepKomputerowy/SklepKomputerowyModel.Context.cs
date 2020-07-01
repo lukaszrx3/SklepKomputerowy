@@ -25,8 +25,6 @@ namespace SklepKomputerowy
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Kategorie> Kategorie { get; set; }
-        public virtual DbSet<ParametryDict> ParametryDict { get; set; }
         public virtual DbSet<Produkty> Produkty { get; set; }
     }
 }

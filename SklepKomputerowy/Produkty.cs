@@ -14,23 +14,11 @@ namespace SklepKomputerowy
     
     public partial class Produkty
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Produkty()
-        {
-            this.ParametryDict = new HashSet<ParametryDict>();
-        }
-    
         public int Id { get; set; }
         public string Nazwa { get; set; }
-        public string Kategoria { get; set; }
         public string Kod { get; set; }
         public decimal Cena { get; set; }
         public string AdresObrazka { get; set; }
-        public Nullable<int> IdKategorii { get; set; }
         public string Opis { get; set; }
-    
-        public virtual Kategorie Kategorie { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ParametryDict> ParametryDict { get; set; }
     }
 }

@@ -23,8 +23,8 @@ namespace SklepKomputerowy.Pages
     {
         private SklepKomputerowyDbEntities db;
         public List<Product> Products;
-        private int priceMin;
-        private int priceMax;
+        private decimal priceFrom = 0;
+        private decimal priceTo = decimal.MaxValue;
 
         public ProductsPage()
         {
@@ -52,9 +52,14 @@ namespace SklepKomputerowy.Pages
 
         private void SearchButton_OnClick(object sender, RoutedEventArgs e)
         {
+            decimal.TryParse(PriceFromTextBox.Text, out priceFrom);
+            
+            if(!decimal.TryParse(PriceToTextBox.Text, out priceTo))
+                priceTo = Decimal.MaxValue;
 
-
-            ListViewProducts.ItemsSource = Products.Where(x => x.Name.Contains(NameTextBox.Text));
+            ListViewProducts.ItemsSource = Products.Where(x => x.Name.Contains(NameTextBox.Text) && x.Code.Contains(CodeTextBox.Text) 
+                                                                                                 && x.Price > priceFrom
+                                                                                                 && x.Price < priceTo);
         }
 
 

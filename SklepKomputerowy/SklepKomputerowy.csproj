@@ -64,17 +64,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Kategorie.cs">
-      <DependentUpon>SklepKomputerowyModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AddProductPage.xaml.cs">
       <DependentUpon>AddProductPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ParametryDict.cs">
-      <DependentUpon>SklepKomputerowyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Produkty.cs">
       <DependentUpon>SklepKomputerowyModel.tt</DependentUpon>
