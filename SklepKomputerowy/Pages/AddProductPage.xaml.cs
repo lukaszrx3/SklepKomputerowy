@@ -12,12 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SklepKomputerowy.Managers;
 using SklepKomputerowy.ViewModels;
 
 namespace SklepKomputerowy.Pages
 {
     /// <summary>
-    /// Interaction logic for AddProductPage.xaml
+    /// Logika AddProductPage.xaml 
     /// </summary>
     public partial class AddProductPage : Page
     {
@@ -29,6 +30,10 @@ namespace SklepKomputerowy.Pages
             db = new SklepKomputerowyDbEntities();
         }
 
+        /// <summary>
+        /// Event wywolywany po kliknieciu produktu
+        /// Tworzy nowy obiekt produktu i jesli spelnia kryteria to dodaje go do bazy danych
+        /// </summary>
         private void AddProductButton_OnClick(object sender, RoutedEventArgs e)
         {
             Produkty p = new Produkty
@@ -40,8 +45,21 @@ namespace SklepKomputerowy.Pages
                 Nazwa = NameTextBox.Text
             };
 
-            db.Produkty.Add(p);
-            db.SaveChanges();
+            if (ProductManager.CheckIfProductCanBeAdded(p))
+            {
+                db.Produkty.Add(p);
+                db.SaveChanges();
+
+                UrlTextBox.Text = "";
+                DescTextBox.Text = "";
+                PriceTextBox.Text = "";
+                NameTextBox.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Uzupelnij wszystkie pola");
+            }
+            
         }
     }
 }

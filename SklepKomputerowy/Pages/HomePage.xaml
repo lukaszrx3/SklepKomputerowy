@@ -17,7 +17,7 @@
         <!-- Gorny rzad -->
         <StackPanel Grid.Row="0" Background="SteelBlue">
             <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold">
-                Lukasz Radzik -  Sklep Komputerowy
+                Sklep Komputerowy
             </TextBlock>
         </StackPanel>
 
@@ -34,13 +34,18 @@
                 <TextBlock Foreground="AliceBlue">Ul. Taka i taka</TextBlock>
                 <TextBlock Foreground="AliceBlue">Miasto: Rzeszow</TextBlock>
                 <TextBlock Foreground="AliceBlue">Podkarpacie</TextBlock>
+                <TextBlock Foreground="AliceBlue"></TextBlock>
+                <TextBlock Foreground="AliceBlue"><Run FontWeight="Bold" Text="Godziny otwarcia"/></TextBlock>
+                <TextBlock Foreground="AliceBlue"><Run Text="poniedziałek-piątek"/><Run Text="&#x9;&#x9;"/><Run Text="0"/><Run Text="9:00-21:00"/></TextBlock>
+                <TextBlock Foreground="AliceBlue"><Run Text="sobota"/><Run Text="&#x9;&#x9;&#x9;&#x9;10:00"/><Run Text="-20:00"/></TextBlock>
             </StackPanel>
 
             <!-- Prawy -->
             <StackPanel Grid.Column="1" Background="DarkOrange">
                 <TextBlock>Wykonal:</TextBlock>
-                <TextBlock>Lukasz Radzik</TextBlock>
+                <TextBlock>Lukasz Radzik i Marcin Gudyka</TextBlock>
                 <TextBlock>Semestr: 4</TextBlock>
+                <TextBlock>Specjlnosc: Internet Rzeczy</TextBlock>
                 <TextBlock>Kierunek: Informatyka</TextBlock>
             </StackPanel>
         </Grid>

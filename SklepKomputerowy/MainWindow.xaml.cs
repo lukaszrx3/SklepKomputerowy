@@ -17,7 +17,7 @@ using SklepKomputerowy.Pages;
 namespace SklepKomputerowy
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika dla MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -26,16 +26,25 @@ namespace SklepKomputerowy
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Laduje strone ProductsPage
+        /// </summary>
         private void ProductsButton_OnClick(object sender, RoutedEventArgs e)
         {
             MainContentFrame.Navigate(new ProductsPage());
         }
 
+        /// <summary>
+        /// Laduje strone HomePage
+        /// </summary>
         private void HomeListButton_OnClick(object sender, RoutedEventArgs e)
         {
             MainContentFrame.Navigate(new HomePage());
         }
 
+        /// <summary>
+        /// Laduje strone AddProductPage
+        /// </summary>
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             MainContentFrame.Navigate(new AddProductPage());

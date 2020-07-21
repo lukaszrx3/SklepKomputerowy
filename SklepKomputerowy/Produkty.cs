@@ -12,6 +12,9 @@ namespace SklepKomputerowy
     using System;
     using System.Collections.Generic;
     
+    /// <summary>
+    /// Klasa wygenerowana z Bazy Danych przez entity framework
+    /// </summary>
     public partial class Produkty
     {
         public int Id { get; set; }
