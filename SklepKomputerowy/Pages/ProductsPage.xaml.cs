@@ -75,14 +75,25 @@ namespace SklepKomputerowy.Pages
         private void SearchButton_OnClick(object sender, RoutedEventArgs e)
         {
             decimal.TryParse(PriceFromTextBox.Text, out priceFrom);
-            
+            string productNameContains = NameTextBox.Text;
+            string productCodeContains = CodeTextBox.Text;
+
             if(!decimal.TryParse(PriceToTextBox.Text, out priceTo))
                 priceTo = Decimal.MaxValue;
 
-            // Filtorwanie
-            var a = Products.Where(x => x.Price > priceFrom && x.Price < priceTo);
+            // Filtrowanie
+            IEnumerable<Product> productsFiltered;
+            
+            productsFiltered = Products.Where(x => x.Price > priceFrom && x.Price < priceTo);
 
-            ListViewProducts.ItemsSource = a;
+            // Jesli productName zostal podany przez usera to zawez filtrowanie
+            if (!string.IsNullOrEmpty(productNameContains))
+                productsFiltered = productsFiltered.Where(x => x.Name.Contains(productNameContains));
+            // Jesli productCode zostal podany przez usera to zawez filtrowanie
+            if (!string.IsNullOrEmpty(productCodeContains))
+                productsFiltered = productsFiltered.Where(x => x.Name.Contains(productNameContains));
+
+            ListViewProducts.ItemsSource = productsFiltered;
         }
 
 

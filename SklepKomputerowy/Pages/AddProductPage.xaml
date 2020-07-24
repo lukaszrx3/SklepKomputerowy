@@ -33,10 +33,10 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <!--Kategoria-->
-            <TextBlock Grid.Column="0" Grid.Row="0" Text="Kategoria" Foreground="#ffbd69" HorizontalAlignment="Center"
+            <!--Kod-->
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Kod" Foreground="#ffbd69" HorizontalAlignment="Center"
                        VerticalAlignment="Center" FontSize="20"/>
-            <TextBox Name="CategoryTextBox" Background="Transparent" Grid.Column="1" Grid.Row="0" Foreground="#ffbd69" MaxHeight="30"/>
+            <TextBox Name="CodeTextBox" Background="Transparent" Grid.Column="1" Grid.Row="0" Foreground="#ffbd69" MaxHeight="30"/>
 
             <!--Nazwa-->
             <TextBlock Grid.Column="0" Grid.Row="1" Text="Nazwa" Foreground="#ffbd69" HorizontalAlignment="Center"

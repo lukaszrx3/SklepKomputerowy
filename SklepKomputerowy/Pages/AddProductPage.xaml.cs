@@ -38,7 +38,7 @@ namespace SklepKomputerowy.Pages
         {
             Produkty p = new Produkty
             {
-                Kod = "asd",
+                Kod = CodeTextBox.Text,
                 AdresObrazka = UrlTextBox.Text,
                 Opis = DescTextBox.Text,
                 Cena = Convert.ToDecimal(PriceTextBox.Text),
@@ -51,6 +51,7 @@ namespace SklepKomputerowy.Pages
                 db.SaveChanges();
 
                 UrlTextBox.Text = "";
+                CodeTextBox.Text = "";
                 DescTextBox.Text = "";
                 PriceTextBox.Text = "";
                 NameTextBox.Text = "";
