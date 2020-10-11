@@ -12,6 +12,11 @@ namespace SklepKomputerowyTests
     [TestClass]
     public class ProductManagerTests
     {
+        /// <summary>
+        /// Sprawdza czy metoda dodajaca produkt dziala poprawnie
+        /// Poprawnie uzupelniony produkt
+        /// Test przechodzi kty metoda zwraca true
+        /// </summary>
         [TestMethod]
         public void CheckIfProductCanBeAdded_FilledProduct_ReturnsTrue()
         {
@@ -23,6 +28,11 @@ namespace SklepKomputerowyTests
             Assert.IsTrue(result);
         }
 
+        /// <summary>
+        /// Sprawdza czy metoda dodajaca produkt dziala poprawnie
+        /// Nieuzupelniony produkt
+        /// Test przechodzi kty metoda zwraca false
+        /// </summary>
         [TestMethod]
         public void CheckIfProductCanBeAdded_EmptyProduct_ReturnsFalse()
         {

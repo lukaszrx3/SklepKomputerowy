@@ -22,6 +22,10 @@ namespace SklepKomputerowy.Pages
     /// </summary>
     public partial class AddProductPage : Page
     {
+
+        /// <summary>
+        /// Object Relational Mapping zapewniajacy obsluge bazy danych
+        /// </summary>
         private SklepKomputerowyDbEntities db;
 
         public AddProductPage()

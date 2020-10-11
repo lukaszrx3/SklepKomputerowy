@@ -15,6 +15,8 @@ namespace SklepKomputerowy.Managers
         /// Sprawdzanie czy Produkt nie ma pustych pol ktore sa wymagane
         /// Nazwy, Opisu i Ceny
         /// </summary>
+        /// <param name="p"></param>
+        /// <returns>True jesli produkt moze byc dodany, false jesli nie moze</returns>
         public static bool CheckIfProductCanBeAdded(Produkty p)
         {
             if (string.IsNullOrEmpty(p.Nazwa))
